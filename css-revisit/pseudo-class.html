@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            .my-hover-div {
+                width: 400px;
+                height: 400px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: dashed 2px #444;
+                background-color: red;
+                transition: background-color 300ms ease-in-out;
+            }
+            .my-hover-div:hover {
+                background-color: green;
+            }
+            a:visited {
+                color: green;
+            }
+            .moving {
+                width: 200px;
+                height: 200px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: dashed 2px #444;
+            }
+            .moving:hover {
+                transform: translateX(500px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="my-hover-div">
+            Hover Over Me
+        </div>
+        <a href="./quiz.html">View the quiz</a>
+        <input type="checkbox" class="move-checkbox">
+        <div class="moving">
+            Magic Moving Div
+        </div>
+    </body>
+</html>
