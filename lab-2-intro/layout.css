@@ -1,0 +1,54 @@
+/* Please put layout-related CSS in this file. I have given you a starting point and some hints for the layout */
+
+.page-content {
+    display: flex;
+}
+
+.user-activity {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-feed {
+    display: flex;
+    flex-direction: column;
+    width: 1500px;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-top: 64px;
+    /* Hmm. Everything sure is close together... How do I add spacing again? */
+}
+
+.news-feed article {
+    border: solid 1px black;
+    margin-bottom: 16px;
+    padding: 16px;
+}
+
+.top-nav .main-links ul {
+    display: flex;
+    list-style-type: none;
+    gap: 8px;
+}
+
+.user-activity img {
+    width: 64px;
+}
+
+.top-nav {
+    border: solid 2px red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: beige;
+    padding-left: 64px;
+}
+
+.user-activity {
+    border: solid 2px green;
+}
+
+.news-feed {
+    border: solid 2px blue;
+}
