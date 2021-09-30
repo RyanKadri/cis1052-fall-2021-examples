@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+            #color-display {
+                width: 200px;
+                height: 200px;
+                border: solid 2px #555;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 16px;
+                transition: background-color 500ms ease-in-out;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="color-display">
+            Pick a color
+        </div>
+        <input type="text" oninput="updateColor()" id="color-input">
+
+        <script>
+            const colorDisplay = document.getElementById("color-display");
+            const colorInput = document.getElementById("color-input");
+
+            function updateColor() {
+                const inputColor = colorInput.value;
+                colorDisplay.style.backgroundColor = inputColor;
+                if(inputColor === "") {
+                    colorDisplay.innerText = "Pick a color";
+                } else if(colorDisplay.style.backgroundColor !== inputColor) {
+                    colorDisplay.innerText = "Invalid"
+                } else {
+                    colorDisplay.innerText = inputColor;
+                }
+            }
+        </script>
+    </body>
+</html>

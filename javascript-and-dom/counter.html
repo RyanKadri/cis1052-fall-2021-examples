@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <body>
+        <h1>This button has been clicked <span id="counter-value">0</span> times</h1>
+        <button onclick="incrementCounter()">Click Me</button>
+
+        <script>
+            const counterDisplay = document.querySelector("#counter-value");
+            let clickCount = 0;
+            
+            function incrementCounter() {
+                clickCount ++;
+                counterDisplay.innerText = clickCount;
+            }
+        </script>
+    </body>
+</html>
