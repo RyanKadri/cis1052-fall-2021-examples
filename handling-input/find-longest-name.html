@@ -1,0 +1,52 @@
+<html>
+    <head></head>
+    <body>
+        <label>
+            Please enter a name:
+            <input type="text" id="name-input" onkeydown="tryAddName(event)">
+        </label>
+        <button onclick="addName()">Add Name</button>
+        <ul id="names-list">
+            
+        </ul>
+        <button onclick="calculateLongestName()">Get Longest Name</button>
+        <p id="result"></p>
+        
+        <script>
+            const nameInput = document.getElementById("name-input");
+            const namesList = document.getElementById("names-list");
+            const resultParagraph = document.getElementById("result");
+            let names = [];
+
+            function tryAddName(e) {
+                if(e.key === "Enter") {
+                    addName();
+                }
+            }
+
+            function addName() {
+                const newName = nameInput.value;
+                const newListItem = document.createElement("li");
+                newListItem.innerText = newName;
+                namesList.appendChild(newListItem);
+                names.push(newName);
+                nameInput.value = "";
+            }
+
+            function calculateLongestName() {
+                const longestName = getLongestName(names);
+                resultParagraph.innerText = "The winner is: " + longestName;
+            }
+
+            function getLongestName(listOfNames) {
+                let currentLongestName = listOfNames[0];
+                for(const name of listOfNames) {
+                    if(name.length > currentLongestName.length) {
+                        currentLongestName = name;
+                    }
+                }
+                return currentLongestName;
+            }
+        </script>
+    </body>
+</html>

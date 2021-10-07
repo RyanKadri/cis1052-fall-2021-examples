@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        <ul id="my-list">
+            
+        </ul>
+
+        <script>
+            const myList = document.querySelector("#my-list");
+            const names = ["Alice", "Bob", "Charlie"];
+            for(const name of names) {
+                const newItem = document.createElement("li");
+                newItem.innerText = name;
+                newItem.classList.add("special");
+                myList.appendChild(newItem);
+            }
+        </script>
+    </body>
+</html>

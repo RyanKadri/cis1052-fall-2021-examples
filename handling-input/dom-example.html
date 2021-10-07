@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="my-heading">Welcome to my page</h1>
+        <ul id="my-list">
+            
+        </ul>
+
+        <script>
+            const myHeading = document.getElementById("my-heading");
+            const myList = document.querySelector("#my-list");
+
+            myHeading.innerText += ". Nice to meet you";
+            const names = ["Alice", "Bob", "Charlie"];
+            for(const name of names) {
+                myList.innerHTML += "<li>" + name + "</li>";
+            }
+        </script>
+    </body>
+</html>

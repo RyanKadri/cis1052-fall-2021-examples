@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="my-heading">Welcome to my page</h1>
+        <label>
+            Enter name:
+            <input type="text" id="name-input" onchange="previewName()">
+        </label>
+
+        <p id="preview">Preview: </p>
+
+        <button onclick="greetUser()">Register</button>
+
+        <script>
+            const myHeading = document.getElementById("my-heading");
+            const nameInput = document.getElementById("name-input");
+            const preview = document.getElementById("preview");
+
+            function greetUser() {
+                const newParagraph = document.createElement("p");
+                newParagraph.innerText = "Nice to meet you " + nameInput.value;
+                myHeading.insertAdjacentElement("afterend", newParagraph);
+            }
+
+            function previewName() {
+                // To see the security vulnerability here, try inputting your name as
+                // <img onerror="alert('h4xor')" src="asdop.html">
+                preview.innerHTML = "Preview: <strong>" + nameInput.value + "</strong>"
+            }
+        </script>
+    </body>
+</html>

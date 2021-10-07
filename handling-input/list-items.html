@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <ul id="my-list" class="something else">
+            <li class="special">First item</li>
+            <li class="special">Second item</li>
+            <li class="special">Third item</li>
+            <li>Fourth item</li>
+        </ul>
+
+        <script>
+            const listItems = document.querySelectorAll("li");
+
+            for(let i = 0; i < 3; i++) {
+                const item = listItems[i]
+                item.innerText += "!!!"
+            }
+        </script>
+    </body>
+</html>
