@@ -1,0 +1,16 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="heading">Welcome to class</h1>
+        <button onclick="changeHeading()">Click Me</button>
+        <script>
+            const heading = document.getElementById("heading");
+            let counter = 0;
+
+            function changeHeading() {
+                heading.innerText = "You clicked the button " + counter + " times";
+                counter ++;
+            }
+        </script>
+    </body>
+</html>

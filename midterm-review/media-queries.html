@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            .container {
+                display: grid;
+                grid-template-columns: 200px 1fr;
+                grid-template-rows: 64px 1fr;
+                grid-template-areas: 'header header'
+                                     'sidebar content';
+                height: 100%;
+            }
+            @media (max-width: 500px) {
+                .container {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 64px 100px 1fr;
+                    grid-template-areas: 'header'
+                                         'sidebar'
+                                         'content';
+                }
+            }
+            header {
+                grid-area: header;
+                border: solid 2px blue;
+            }
+            aside {
+                grid-area: sidebar;
+                border: solid 2px green;
+            }
+            main {
+                grid-area: content;
+                border: solid 2px red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>Header</header>
+            <aside>Sidebar</aside>
+            <main>Content</main>
+        </div>
+    </body>
+</html>

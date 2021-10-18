@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <style>
+            div {
+                height: 100%;
+            }
+            body {
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="color-box">
+            <button onclick="changeColors()">Change Color</button>
+        </div>
+
+        <script>
+            const colorBox = document.getElementById("color-box");
+            const colors = ["red", "green", "blue", "purple"];
+            let currentColor = 0;
+
+            function changeColors() {
+                colorBox.style.backgroundColor = colors[currentColor];
+                currentColor ++;
+                if(currentColor > 3) {
+                    currentColor = 0;
+                }
+            }
+        </script>
+    </body>
+</html>

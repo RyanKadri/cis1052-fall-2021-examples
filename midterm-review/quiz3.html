@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <div class="paragraph-container">
+            <a href="https://google.com">Google</a>
+        </div>
+        <h1>My Important Document</h1>
+
+        <h2>Subtitle</h2>
+
+        <h3>Sub-section</h3>
+        <button onclick="addItem()" class="special">Click Me</button>
+        <script>
+            const container = document.getElementById("paragraph-container");
+
+            function addItem() {
+                const newItem = document.createElement("p");
+                newItem.innerText = "New Paragraph";
+                container.appendChild(newItem);
+            }
+        </script>
+    </body>
+</html>

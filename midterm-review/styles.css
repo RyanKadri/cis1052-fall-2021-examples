@@ -1,0 +1,16 @@
+p {
+    color: red;
+    font-size: 20px;
+}
+.special {
+    border: solid 2px green;
+    color: purple;
+}
+#my-id {
+    font-weight: bold;
+    color: blue;
+}
+.special header {
+    background-color: blue;
+    color: white;
+}
