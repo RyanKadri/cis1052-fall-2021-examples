@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="my-heading">Welcome to HTML!</h1>
+        <script>
+            const myHeading = document.getElementById("my-heading");
+
+            setTimeout(addExclamationPoint, 3000)
+
+            function addExclamationPoint() {
+                myHeading.innerText += "!"
+                setTimeout(addExclamationPoint, 3000)
+            }
+
+        </script>
+    </body>
+</html>

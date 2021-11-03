@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="my-header">Welcome to HTML</h1>
+        <button id="the-button">Click Me</button>
+        <script>
+            const myHeader = document.getElementById("my-header");
+            const myButton = document.getElementById("the-button");
+
+            myButton.addEventListener("click", handleClick);
+
+            function handleClick() {
+                myHeader.innerText = "Welcome to JavaScript"
+            }
+        </script>
+    </body>
+</html>
