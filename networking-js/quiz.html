@@ -1,0 +1,26 @@
+<html>
+  <head></head>
+  <body>
+    <h1 id="my-heading">The page has loaded</h1>
+    <script>
+        const myHeading = document.getElementById("my-heading");
+        setTimeout(firstChange, 1000);
+        
+        function firstChange() {
+            myHeading.innerText = "First";
+            setTimeout(secondChange, 2000);
+        }
+        
+        function secondChange() {
+            myHeading.innerText = "Second";
+            setTimeout(thirdChange, 3000);
+        }
+
+        function thirdChange() {
+            myHeading.innerText = "Third";
+        }
+
+
+    </script>
+  </body>
+</html>

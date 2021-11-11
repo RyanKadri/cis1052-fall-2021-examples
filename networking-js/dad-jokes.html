@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Joke of the Day</h1>
+        <button onclick="loadJoke()">Load Joke</button>
+        <p id="joke-output"></p>
+
+        <script>
+            const outputParagraph = document.getElementById("joke-output");
+
+            function loadJoke() {
+                outputParagraph.innerText = "Loading"
+                fetch("https://icanhazdadjoke.com/", { method: "GET", headers: { ["Accept"]: "application/json" } })
+                    .then(function(response) { return response.json() })
+                    .then(function(data) {
+                        outputParagraph.innerText = data.joke;
+                        outputParagraph.style.color = ""
+                    })
+                    .catch(function(e) {
+                        outputParagraph.innerText = "Oh no! There was an error"
+                        outputParagraph.style.color = "red"
+                    })
+            }
+        </script>
+    </body>
+</html>
