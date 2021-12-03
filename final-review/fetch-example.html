@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="poke-name"></h1>
+        <section>
+            <header>Type 1:</header>
+            <div id="first-type"></div>
+        </section>
+        <section>
+            <header>Type 2:</header>
+            <div id="second-type"></div>
+        </section>
+        <script>
+            const pokemonName = document.getElementById("poke-name");
+            const firstTypeField = document.getElementById("first-type");
+            let globalData = {};
+
+            fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+                .then(resp => resp.json())
+                .then(function(data) {
+                    console.log(data)
+                    pokemonName.innerText = data.name;
+                    const firstType = data.types[0].type.name;
+                    firstTypeField.innerText = firstType;
+                    if(firstType === "electric") {
+                        firstTypeField.style.backgroundColor = "yellow";
+                    } else if (firstType === "fire") {
+                        firstTypeField.style.backgroundColor = "red";
+                    } else if (firstType === "grass") {
+                        firstTypeField.style.backgroundColor = "green";
+                    } else {
+                        firstTypeField.style.backgroundColor = "grey";
+                    }
+                })
+        </script>
+    </body>
+</html>

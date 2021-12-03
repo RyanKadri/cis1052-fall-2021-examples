@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <body>
+        <h1 id="name"></h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Height</th><th>Weight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="height"></td><td id="weight"></td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            const nameField = document.getElementById("name");
+            const heightField = document.getElementById("height");
+            const weightField = document.getElementById("weight");
+
+            fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+                .then(resp => resp.json())
+                .then(data => {
+                    nameField.innerText = data.name.charAt(0).toUpperCase() + data.name.slice(1)
+                    console.log(data)
+                    weightField.innerText = data.weight;
+                    heightField.innerText = data.height;
+                });
+        </script>
+    </body>
+</html>

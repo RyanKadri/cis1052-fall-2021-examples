@@ -1,0 +1,74 @@
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+        }
+        #top-header {
+            background-color: green;
+            color: white;
+            padding: 8px 24px;
+            border: solid 2px red;
+        }
+        main article img {
+            width: 300px
+        }
+        main article {
+            border: solid 1px #ccc;
+            padding: 16px;
+            margin: 8px;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        @media (max-width: 500px) {
+            main {
+                grid-template-columns: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="top-header">
+        <h1>InstaPet</h1>
+    </header>
+    <main>
+        <article>
+            <header>
+                <h1>Chewbacca</h1>
+            </header>
+            <section>
+                <img src="dog.jpg">
+                Chewbacca likes belly rubs and chewing things
+            </section>
+            <footer>Member since 2017</footer>
+        </article>
+        <article>
+            <header>
+                <h1>Catherine</h1>
+            </header>
+            <section>
+                <img src="cat.png">
+                Catherine likes scritches
+            </section>
+            <footer>Member since 2019</footer>
+        </article>
+        <article>
+            <header>
+                <h1>Arty</h1>
+            </header>
+            <section>
+                <img src="aardvark.jpg">
+                Is Arty a legal pet?
+            </section>
+            <footer>
+                Member since
+            </footer>
+        </article>
+    </main>
+    <footer>
+        Copyright 2020
+    </footer>
+</body>
+</html>

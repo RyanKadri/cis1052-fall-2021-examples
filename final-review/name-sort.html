@@ -1,0 +1,51 @@
+<html>
+    <head></head>
+    <body>
+        
+        <h1>My Employees</h1>
+        <label>Filter: <input id="filter-input" oninput="handleInput()"></label>
+        <ul id="employee-list">
+        </ul>
+        <script>
+
+            const employees = [
+                { name: "Alice", age: 26, id: "123" },
+                { name: "Andrew", age: 27, id: "124" },
+                { name: "Anna", age: 42, id: "125" },
+                { name: "Anders", age: 17, id: "126" },
+                { name: "Bob", age: 50, id: "127" },
+                { name: "Cathy", age: 43, id: "128" },
+                { name: "Duncan", age: 117, id: "129" },
+            ]
+
+            const employeeList = document.getElementById("employee-list");
+            const filterInput = document.getElementById("filter-input");
+
+            function displayEmployees(myEmployees) {
+                employeeList.innerHTML = "";
+                for(const employee of myEmployees) {
+                    employeeList.innerHTML += "<li>" + employee.name + "</li>"
+                }
+            }
+
+            function handleInput() {
+                const employeesA = filterEmployees(filterInput.value);
+                displayEmployees(employeesA);
+            }
+
+            function filterEmployees(byFirstLetter) {
+                let filteredEmployees = [];
+
+                for(const employee of employees) {
+                    if(employee.name.startsWith(byFirstLetter)) {
+                        filteredEmployees.push(employee)
+                    }
+                }
+
+                return filteredEmployees;
+            }
+
+            displayEmployees(employees)
+        </script>
+    </body>
+</html>
